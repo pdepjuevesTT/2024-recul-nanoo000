@@ -14,7 +14,7 @@ viveEn(vale,flores).
 viveEn(fer,flores).
 
 loft(julian,2000).
-
+%No se modela Rocio ya que no vive en dicha casa de 90 metros sino que lo desea, y en la base debe haber hechos.
 %Punto 2
 esBarrioCopado(Barrio,Persona):-
     viveEn(Persona,Barrio),
