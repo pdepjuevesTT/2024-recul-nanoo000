@@ -14,7 +14,7 @@ viveEn(vale,flores).
 viveEn(fer,flores).
 
 loft(julian,2000).
-%No se modela Rocio ya que no vive en dicha casa de 90 metros sino que lo desea, y en la base debe haber hechos.
+%No se modela Rocio ya que no vive en dicha casa de 90 metros sino que lo desea, y en la base debe haber hechos. Lo mismo con Felipe, al no saber donde esta, no se agrega a la base del universo.
 %Punto 2
 esBarrioCopado(Barrio):-
     viveEn(_,Barrio),
@@ -64,8 +64,8 @@ preciosDecasas([Casa|DemasCasas],PrecioTotal):-
 
 precioDeCasas([Casa],PrecioTotal):-
     valorDeCasa(Casa,PrecioDeCasa),
-    precioDeCasas([DemasCasas],PrecioTotal+PrecioDeCasa).
-precioDeCasas([],PrecioDeCasa).
+    precioDeCasas([],PrecioTotal+PrecioDeCasa).
+precioDeCasas([],PrecioTotal).
 
 
 
@@ -81,5 +81,5 @@ valorDeCasa(fer,60000).
 
 subListasDeCasas([],[]).
 subListasDeCasas([_|Cola],SubLista):-subListasDeCasas(Cola,SubLista).
-subListasDeCasas([Cabeza,Cola],[Cabeza|SubLista]):-subListasDeCasas(Cola,SubLista).%Punto 4
+subListasDeCasas([Cabeza,Cola],[Cabeza|SubLista]):-subListasDeCasas(Cola,SubLista).
 
