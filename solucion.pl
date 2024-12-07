@@ -1,3 +1,4 @@
+Ignacio Martin Cordoba Legajo 
 espacioDePropiedad(juan,120).
 espacioDePropiedad(fer,110).
 espacioDePropiedad(rocio,120).
