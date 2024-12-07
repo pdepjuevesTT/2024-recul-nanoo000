@@ -52,3 +52,34 @@ tienePropiedadBarata(Persona):-
 
 %Punto 4
 
+sePuedeComprar(DineroDisponible,Casas,Sobrante):-
+ subListasDeCasas(Casas),   
+ precioDeCasas(Casas,PrecioTotal),
+ DineroDisponible>=PrecioTotal,
+ Sobrante is DineroDisponible-PrecioTotal.
+
+preciosDecasas([Casa|DemasCasas],PrecioTotal):-
+    valorDeCasa(Casa,PrecioDeCasa),
+    precioDeCasas([DemasCasas],PrecioTotal+PrecioDeCasa).
+
+precioDeCasas([Casa],PrecioTotal):-
+    valorDeCasa(Casa,PrecioDeCasa),
+    precioDeCasas([DemasCasas],PrecioTotal+PrecioDeCasa).
+precioDeCasas([],PrecioDeCasa).
+
+
+
+
+valorDeCasa(juan,150000).
+valorDeCasa(nico,80000).
+valorDeCasa(alf,75000).
+valorDeCasa(julian,140000).
+valorDeCasa(vale,95000).
+valorDeCasa(fer,60000).
+
+
+
+subListasDeCasas([],[]).
+subListasDeCasas([_|Cola],SubLista):-subListasDeCasas(Cola,SubLista).
+subListasDeCasas([Cabeza,Cola],[Cabeza|SubLista]):-subListasDeCasas(Cola,SubLista).%Punto 4
+
