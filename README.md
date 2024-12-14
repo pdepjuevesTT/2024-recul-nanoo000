@@ -2,4 +2,5 @@
 
 Consigna:
 
-Nombre:
+Nombre:Ignacio Martin Cordoba
+jueves mañana
